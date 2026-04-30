@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BazaarLink | Karachi's Premier Geo-Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#04122e",
+                        "secondary": "#1c4fd6",
+                        "tertiary": "#00161d",
+                        "on-tertiary-container": "#009bbe",
+                        "background": "#fbf8fb",
+                        "surface": "#fbf8fb",
+                        "surface-container": "#efedf0",
+                        "surface-container-low": "#f5f3f6",
+                        "surface-container-highest": "#e4e2e5",
+                        "on-surface": "#1b1b1e",
+                        "on-surface-variant": "#45464d",
+                        "outline-variant": "#c5c6ce",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "lexend": ["Lexend", "sans-serif"],
+                        "inter": ["Inter", "sans-serif"],
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(28, 79, 214, 0.15), transparent);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .7; transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-inter antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-white/10 shadow-xl flex justify-between items-center px-8 h-16 font-lexend">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-white">BazaarLink</span>
+<div class="hidden md:flex gap-6">
+<a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1" href="#">Map</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#">Markets</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#">Shops</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#">Categories</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-300 hover:text-white transition-colors px-4 py-2 font-medium">Sign In</button>
+<button class="bg-secondary text-white px-6 py-2 rounded-lg font-bold hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-secondary/20">Get Started</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="max-w-[1280px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+<div class="space-y-8">
+<h1 class="font-lexend text-5xl md:text-6xl font-bold text-white leading-tight">
+                    Shop Local Markets <br/>
+<span class="bg-gradient-to-r from-on-tertiary-container to-cyan-400 bg-clip-text text-transparent">From Anywhere</span>
+</h1>
+<p class="text-lg text-slate-300 max-w-xl">
+                    Karachi's first geospatial commerce platform bridging the gap between traditional bazaars and modern logistics. Discover authentic shops with precision navigation.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-gradient-to-br from-secondary to-on-tertiary-container text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 hover:shadow-xl transition-all">
+                        Explore Markets <span class="material-symbols-outlined">explore</span>
+</button>
+<button class="border-2 border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">
+                        For Vendors
+                    </button>
+</div>
+<div class="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
+<div>
+<p class="text-3xl font-bold text-white">12+</p>
+<p class="text-slate-400 text-xs uppercase tracking-widest">Markets</p>
+</div>
+<div>
+<p class="text-3xl font-bold text-white">400+</p>
+<p class="text-slate-400 text-xs uppercase tracking-widest">Shops</p>
+</div>
+<div>
+<p class="text-3xl font-bold text-white">5K+</p>
+<p class="text-slate-400 text-xs uppercase tracking-widest">Products</p>
+</div>
+</div>
+</div>
+<!-- Karachi Map Mockup -->
+<div class="relative bg-[#0d1b37] rounded-3xl p-4 border border-white/10 shadow-2xl overflow-hidden aspect-square">
+<div class="absolute inset-0 opacity-40" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrupBNCVLdk2EKnLp3s759jfSYFTsT84tdBBoP1kPbzrRV7dU3S-7YnBP0a1LyeF381NMg4JWhKLK1t9wg7fsYbpOSOzjITb0H6kWFbz4uFI0QRXNnS1cF2wa9tPpY2U-VNOyH2wC4NNzPLMgwt2JJSknjoslKDbt0OQVrFzsYeQVo3cCmHBQR1Io1mc_vW_NVpdJ0cpgQiujHl093Euyb_lVjK9T1h2noCIS_yTd7MtdLppI4koauTKJ4nSlns-kFNhTiXAYFX1o'); background-size: cover; background-position: center; filter: invert(1) hue-rotate(180deg) brightness(0.8);"></div>
+<!-- Saddar -->
+<div class="absolute top-1/4 left-1/3 group cursor-pointer">
+<div class="absolute -inset-3 bg-cyan-400/30 rounded-full animate-ping"></div>
+<div class="relative bg-cyan-400 p-2 rounded-full shadow-lg"><span class="material-symbols-outlined text-white text-[16px]">location_on</span></div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-900 text-white px-2 py-1 rounded text-[10px] font-bold whitespace-nowrap">Saddar Bazaar</div>
+</div>
+<!-- Bohri -->
+<div class="absolute top-1/2 left-1/4 group cursor-pointer">
+<div class="absolute -inset-3 bg-secondary/30 rounded-full animate-ping" style="animation-delay: 0.5s"></div>
+<div class="relative bg-secondary p-2 rounded-full shadow-lg"><span class="material-symbols-outlined text-white text-[16px]">storefront</span></div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-900 text-white px-2 py-1 rounded text-[10px] font-bold whitespace-nowrap">Bohri Bazaar</div>
+</div>
+<!-- Hafeez Centre -->
+<div class="absolute top-1/3 right-1/3 group cursor-pointer">
+<div class="absolute -inset-3 bg-purple-500/30 rounded-full animate-ping" style="animation-delay: 0.8s"></div>
+<div class="relative bg-purple-500 p-2 rounded-full shadow-lg"><span class="material-symbols-outlined text-white text-[16px]">devices</span></div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-900 text-white px-2 py-1 rounded text-[10px] font-bold whitespace-nowrap">Hafeez Centre</div>
+</div>
+<!-- Burns Road -->
+<div class="absolute bottom-1/3 right-1/4 group cursor-pointer">
+<div class="absolute -inset-3 bg-orange-500/30 rounded-full animate-ping" style="animation-delay: 1.2s"></div>
+<div class="relative bg-orange-500 p-2 rounded-full shadow-lg"><span class="material-symbols-outlined text-white text-[16px]">restaurant</span></div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-900 text-white px-2 py-1 rounded text-[10px] font-bold whitespace-nowrap">Burns Road</div>
+</div>
+<!-- Jodia Bazaar -->
+<div class="absolute bottom-1/4 left-1/2 group cursor-pointer">
+<div class="absolute -inset-3 bg-green-500/30 rounded-full animate-ping" style="animation-delay: 1.5s"></div>
+<div class="relative bg-green-500 p-2 rounded-full shadow-lg"><span class="material-symbols-outlined text-white text-[16px]">inventory_2</span></div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-900 text-white px-2 py-1 rounded text-[10px] font-bold whitespace-nowrap">Jodia Bazaar</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-slate-900/80 backdrop-blur-md border border-white/10 p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-cyan-400/20 flex items-center justify-center text-cyan-400">
+<span class="material-symbols-outlined">my_location</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">Live Scanning</p>
+<p class="text-slate-400 text-xs">District South, Karachi</p>
+</div>
+</div>
+<div class="h-2 w-24 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-cyan-400 rounded-full w-2/3"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-24 bg-surface">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="text-center mb-16">
+<span class="text-secondary font-bold uppercase tracking-widest text-sm">Our Process</span>
+<h2 class="font-lexend text-4xl text-primary mt-4 font-bold">How It Works</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="bg-white p-8 rounded-2xl border border-outline-variant hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-blue-50 text-blue-600 flex items-center justify-center rounded-2xl mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">map</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4">1. Find Market</h3>
+<p class="text-on-surface-variant leading-relaxed">Use our interactive map to discover historic and specialty markets across Karachi with precision geolocation.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-outline-variant hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-cyan-50 text-cyan-600 flex items-center justify-center rounded-2xl mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">grid_view</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4">2. Browse Shops</h3>
+<p class="text-on-surface-variant leading-relaxed">Enter virtual storefronts of real physical shops. Explore live inventories and compare prices across the bazaar.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-outline-variant hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-green-50 text-green-600 flex items-center justify-center rounded-2xl mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">shopping_cart_checkout</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4">3. Place Order</h3>
+<p class="text-on-surface-variant leading-relaxed">Consolidate items from multiple shops in one order and have them delivered to your doorstep within hours.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Browse Markets -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="font-lexend text-4xl font-bold text-primary">Browse Markets</h2>
+<p class="text-on-surface-variant mt-2 text-lg">Karachi's commercial hubs at your fingertips</p>
+</div>
+<div class="flex gap-2 p-1 bg-surface-container-highest rounded-xl overflow-x-auto">
+<button class="px-6 py-2 bg-white rounded-lg shadow-sm font-bold text-secondary">All Areas</button>
+<button class="px-6 py-2 text-on-surface-variant hover:bg-white/50 rounded-lg transition-all font-medium">South</button>
+<button class="px-6 py-2 text-on-surface-variant hover:bg-white/50 rounded-lg transition-all font-medium">East</button>
+<button class="px-6 py-2 text-on-surface-variant hover:bg-white/50 rounded-lg transition-all font-medium">Central</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Market Card 1 -->
+<div class="bg-white rounded-3xl overflow-hidden border border-outline-variant hover:border-secondary transition-all group">
+<div class="h-56 overflow-hidden relative">
+<img alt="Saddar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbQemGcwJh8jzTP8IEuYGVtfGv3n3fxb_pnkYEQ126b2hiL5y4tKyhzOMxMZFCdDQs0DMezATC_WWayd3POGShdze-Z7kNKiTExesTnb_sAPZUYyM1pkYZwPwIdNZRXRl7Z2OHGK9CS6DVREGCx7VGB-SnpcymjmCHsYkMaoUZ8d6wSQkmQH1_aleIApEvwvbdT-7eA9s9sTBiEYlYJLfZF6AoCgaYBr2WpRWO6tQmA2blhDmBPbwl-Vz7WCTUByYo0TeelJpza0U"/>
+<div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-1 shadow-lg">
+<span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> OPEN NOW
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-primary">Saddar Bazaar</h4>
+<div class="flex items-center gap-1 bg-orange-50 text-orange-600 px-2 py-0.5 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm">star</span> 4.8
+                            </div>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">District South • Apparel &amp; Electronics</p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="text-xs font-bold text-slate-400">120+ ACTIVE SHOPS</span>
+<button class="text-secondary font-bold text-sm flex items-center gap-1 hover:underline">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<!-- Market Card 2 -->
+<div class="bg-white rounded-3xl overflow-hidden border border-outline-variant hover:border-secondary transition-all group">
+<div class="h-56 overflow-hidden relative">
+<img alt="Bohri" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtJwWR0r3PAK3rXUT2uf08YQW__W1fflctNBPE3jEH7z1Br8f86N3Zpb2zL5-5tGpHWL0Gm3rW6Bya4llNURBbJnU14l2qJPhno-C50QnPKb1qhw3SNWX62Ta4RJIKhvVd_ER34OxuwBE2lEPSxlyf_VNBK2Dmj6jczl5n7TnJBvDpjJyEQvs8i56PlttGXBkYBK3ETrbwsSA19-tnK1qgYbiJpkvcstDAVoLRXaJ-Ryq7-e4CzyvR2X9Rv0VoNoPssv5JMV6MvMo"/>
+<div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-1 shadow-lg">
+<span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> OPEN NOW
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-primary">Bohri Bazaar</h4>
+<div class="flex items-center gap-1 bg-orange-50 text-orange-600 px-2 py-0.5 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm">star</span> 4.9
+                            </div>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Empress Market • Handicrafts &amp; Home</p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="text-xs font-bold text-slate-400">85+ ACTIVE SHOPS</span>
+<button class="text-secondary font-bold text-sm flex items-center gap-1 hover:underline">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<!-- Market Card 3 -->
+<div class="bg-white rounded-3xl overflow-hidden border border-outline-variant hover:border-secondary transition-all group">
+<div class="h-56 overflow-hidden relative">
+<img alt="Jackson" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPnm28B-5u6Y5KmRBbW2yr6sXsbnGyeEkLV7_ZuZWAK_49iEru4loEfCDY97QoitSPdmz-2DJ1qxpBb39REfcCHnOzT9OR6bqm4j-rr9EEowdU4wh1y3I_iv--Dq2QIS_t37KSDX870_-09G5d7uPh3CiLqFFqCMqb2RnAWSEu3tbjsk-IyObAQUKncHuwuO7ZqpeE-6STyQdZemXTKNOTjGDv8Ot_tXilgNVMazLuHWkcF5MUXYbuaoXAIJJs6nIiLnUW4MquFZ4"/>
+<div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-1 shadow-lg">
+<span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> OPEN NOW
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-primary">Jackson Market</h4>
+<div class="flex items-center gap-1 bg-orange-50 text-orange-600 px-2 py-0.5 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm">star</span> 4.6
+                            </div>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Keamari • Electronics &amp; Tech</p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="text-xs font-bold text-slate-400">60+ ACTIVE SHOPS</span>
+<button class="text-secondary font-bold text-sm flex items-center gap-1 hover:underline">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<!-- Market Card 4 -->
+<div class="bg-white rounded-3xl overflow-hidden border border-outline-variant hover:border-secondary transition-all group">
+<div class="h-56 overflow-hidden relative">
+<img alt="Zainab" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1j3wOwh2jJLb-53lskGb4an0tLSb4COIoMfgEQZv-GR5YBSN_CHcpEzEhG_ZhRZQkVOcgtUDMBDs6OlKnKu2ZrSrhoOX6oK_oEYpwzxtbO1U3gaJ2pL7qZInDP_otZHxtTVbcDSNnevHmRuXHKMtB8cQq-EJd5uYIChgT1H4rJ6Uc2ubjGCMkpjThayA-fPNOmLFz0QcAwLsdKq09vVz8hdXBzCG24VdWwI1g1Um1gocxxJ1g9Ly4rQeM1w3Au7fUeiXDaqcayIg"/>
+<div class="absolute top-4 right-4 bg-slate-400 text-white px-3 py-1 rounded-full text-[10px] font-bold shadow-lg">
+                            CLOSED
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-primary">Zainab Market</h4>
+<div class="flex items-center gap-1 bg-orange-50 text-orange-600 px-2 py-0.5 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm">star</span> 4.7
+                            </div>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">M.A Jinnah Road • Export Quality Apparel</p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="text-xs font-bold text-slate-400">150+ ACTIVE SHOPS</span>
+<button class="text-secondary font-bold text-sm flex items-center gap-1 hover:underline">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<!-- Market Card 5 -->
+<div class="bg-white rounded-3xl overflow-hidden border border-outline-variant hover:border-secondary transition-all group">
+<div class="h-56 overflow-hidden relative">
+<div class="w-full h-full bg-slate-200 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-slate-400">computer</span>
+</div>
+<div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-1 shadow-lg">
+<span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> OPEN NOW
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-primary">Hafeez Centre</h4>
+<div class="flex items-center gap-1 bg-orange-50 text-orange-600 px-2 py-0.5 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm">star</span> 4.5
+                            </div>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Gulberg Area • IT &amp; Smartphones</p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="text-xs font-bold text-slate-400">300+ ACTIVE SHOPS</span>
+<button class="text-secondary font-bold text-sm flex items-center gap-1 hover:underline">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<!-- Market Card 6 -->
+<div class="bg-white rounded-3xl overflow-hidden border border-outline-variant hover:border-secondary transition-all group">
+<div class="h-56 overflow-hidden relative">
+<div class="w-full h-full bg-slate-200 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-slate-400">restaurant</span>
+</div>
+<div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-1 shadow-lg">
+<span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> OPEN NOW
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-primary">Burns Road</h4>
+<div class="flex items-center gap-1 bg-orange-50 text-orange-600 px-2 py-0.5 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm">star</span> 4.9
+                            </div>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Saddar • Historic Food Street</p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="text-xs font-bold text-slate-400">45+ ACTIVE SHOPS</span>
+<button class="text-secondary font-bold text-sm flex items-center gap-1 hover:underline">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- For Vendors CTA Banner -->
+<section class="py-16">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="bg-primary rounded-3xl p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="relative z-10 text-center md:text-left">
+<h2 class="text-3xl font-bold text-white mb-4">List Your Shop</h2>
+<p class="text-slate-300 text-lg max-w-md">Reach thousands of customers across Karachi and digitalize your physical inventory in minutes.</p>
+</div>
+<div class="relative z-10">
+<button class="bg-gradient-to-r from-secondary to-on-tertiary-container text-white px-10 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all whitespace-nowrap">
+                        Join as Vendor
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4 Roles Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-lexend text-4xl font-bold text-primary">An Integrated Ecosystem</h2>
+<p class="text-on-surface-variant mt-4 max-w-2xl mx-auto text-lg">One platform, four specialized experiences tailored for urban commerce.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Admin -->
+<div class="bg-blue-50/50 p-8 rounded-3xl border border-blue-100 hover:shadow-xl transition-all">
+<div class="w-14 h-14 bg-blue-600 text-white flex items-center justify-center rounded-2xl mb-6">
+<span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
+</div>
+<h3 class="text-xl font-bold text-blue-900 mb-3">Platform Admin</h3>
+<p class="text-blue-700/70 text-sm leading-relaxed mb-6">High-level oversight of all city markets, merchant verifications, and global logistical data.</p>
+<button class="text-blue-600 font-bold text-sm hover:underline">Launch Dashboard</button>
+</div>
+<!-- Market Admin -->
+<div class="bg-green-50/50 p-8 rounded-3xl border border-green-100 hover:shadow-xl transition-all">
+<div class="w-14 h-14 bg-green-600 text-white flex items-center justify-center rounded-2xl mb-6">
+<span class="material-symbols-outlined text-3xl">domain</span>
+</div>
+<h3 class="text-xl font-bold text-green-900 mb-3">Market Admin</h3>
+<p class="text-green-700/70 text-sm leading-relaxed mb-6">Manage a specific market area, coordinate with shop owners, and optimize pedestrian flow maps.</p>
+<button class="text-green-600 font-bold text-sm hover:underline">Manage District</button>
+</div>
+<!-- Shop Admin -->
+<div class="bg-purple-50/50 p-8 rounded-3xl border border-purple-100 hover:shadow-xl transition-all">
+<div class="w-14 h-14 bg-purple-600 text-white flex items-center justify-center rounded-2xl mb-6">
+<span class="material-symbols-outlined text-3xl">storefront</span>
+</div>
+<h3 class="text-xl font-bold text-purple-900 mb-3">Shop Admin</h3>
+<p class="text-purple-700/70 text-sm leading-relaxed mb-6">Digitalize your physical inventory, manage orders, and connect with customers city-wide.</p>
+<button class="text-purple-600 font-bold text-sm hover:underline">Vendor Portal</button>
+</div>
+<!-- Customer -->
+<div class="bg-orange-50/50 p-8 rounded-3xl border border-orange-100 hover:shadow-xl transition-all">
+<div class="w-14 h-14 bg-orange-600 text-white flex items-center justify-center rounded-2xl mb-6">
+<span class="material-symbols-outlined text-3xl">person</span>
+</div>
+<h3 class="text-xl font-bold text-orange-900 mb-3">Customer</h3>
+<p class="text-orange-700/70 text-sm leading-relaxed mb-6">Seamless shopping experience with integrated map navigation and authentic local product discovery.</p>
+<button class="text-orange-600 font-bold text-sm hover:underline">Start Shopping</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-white px-12 py-12 font-lexend">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between gap-12">
+<div class="flex flex-col gap-4">
+<span class="text-2xl font-black tracking-tighter">BazaarLink</span>
+<p class="text-slate-400 max-w-sm normal-case text-sm leading-relaxed">
+                Bridging Karachi's traditional commerce with precision technology for a seamless urban shopping experience.
+            </p>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-white/5 text-slate-400 rounded text-[10px] border border-white/10 uppercase tracking-widest">React</span>
+<span class="px-2 py-1 bg-white/5 text-slate-400 rounded text-[10px] border border-white/10 uppercase tracking-widest">Leaflet JS</span>
+<span class="px-2 py-1 bg-white/5 text-slate-400 rounded text-[10px] border border-white/10 uppercase tracking-widest">Node.js</span>
+<span class="px-2 py-1 bg-white/5 text-slate-400 rounded text-[10px] border border-white/10 uppercase tracking-widest">PostgreSQL</span>
+</div>
+</div>
+<div class="flex flex-col md:items-end gap-6">
+<div class="flex flex-wrap gap-6 text-sm">
+<a class="text-slate-400 hover:text-cyan-400 transition-colors" href="#">Team Credits</a>
+<a class="text-slate-400 hover:text-cyan-400 transition-colors" href="#">Tech Stack</a>
+<a class="text-slate-400 hover:text-cyan-400 transition-colors" href="#">API Docs</a>
+<a class="text-slate-400 hover:text-cyan-400 transition-colors" href="#">Support</a>
+</div>
+<div class="text-[11px] text-slate-500 uppercase tracking-widest flex flex-wrap gap-x-4 gap-y-2 md:justify-end">
+<span>Abdul Rafay Ansari</span>
+<span class="hidden md:inline">•</span>
+<span>Hamza Salahuddin</span>
+<span class="hidden md:inline">•</span>
+<span>M. Shahzain Khan</span>
+</div>
+<p class="text-slate-600 text-xs mt-4">© 2024 BazaarLink. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
